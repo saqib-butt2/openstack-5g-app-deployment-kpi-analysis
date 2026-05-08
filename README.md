@@ -1,8 +1,6 @@
 # OpenStack Private Cloud Deployment — 5G Coverage Analytics
 
-> **Academic Assessment** | Future Internet Technologies (CSI_7_FIT)
-> London South Bank University | Student ID: 4126385
-
+> **Academic Assessment** 
 ---
 
 ## Overview
