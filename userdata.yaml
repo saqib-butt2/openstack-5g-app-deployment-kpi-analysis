@@ -1,0 +1,25 @@
+# userdata.yaml
+# Cloud-init configuration file for OpenStack instance
+# Passed via config-drive during instance creation to fix SSH authentication failure
+# cloud-init reads this from a virtual CD-ROM instead of the network metadata service
+
+#cloud-config
+
+# Create default user with sudo privileges
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys: []
+
+# Enable password authentication for SSH
+ssh_pwauth: true
+
+# Set password for ubuntu user
+chpasswd:
+  list: |
+    ubuntu:secret
+  expire: false
+
+# Allow password authentication
+password: secret
